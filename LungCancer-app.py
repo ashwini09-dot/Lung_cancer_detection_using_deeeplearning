@@ -6,7 +6,7 @@ import numpy as np
 import cv2
 
 # Load the model
-loaded_model = tf.keras.models.load_model('efficientnetb1_model.h5')
+loaded_model = tf.keras.models.load_model('efficientnetb1_modelv2')
 
 def predict_image_with_heatmap(img):
     print("Predicting image...")
