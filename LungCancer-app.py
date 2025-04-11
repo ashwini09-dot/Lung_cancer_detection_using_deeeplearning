@@ -3,7 +3,7 @@ import os
 import gdown
 
 import streamlit as st
-import tensorflow as tf
+
 import numpy as np
 import cv2
 
@@ -14,7 +14,8 @@ url = f"https://drive.google.com/file/d/1sdbiZ8ZxY32qlQmLsKRwYS2TCuJ71H0X/view?u
 
 if not os.path.exists(model_path):
     gdown.download(url, model_path, quiet=False)
-    
+
+import tensorflow as tf
 loaded_model = tf.keras.models.load_model(model_path)
 
 
