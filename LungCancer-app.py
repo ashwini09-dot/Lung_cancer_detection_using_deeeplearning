@@ -9,7 +9,7 @@ import cv2
 
 
 model_path = "efficientnetb1_modelv2.h5"
-file_id = "YOUR_FILE_ID"  # Replace with your actual ID
+file_id = "1sdbiZ8ZxY32qlQmLsKRwYS2TCuJ71H0X"  # Replace with your actual ID
 url = f"https://drive.google.com/file/d/1sdbiZ8ZxY32qlQmLsKRwYS2TCuJ71H0X/view?usp=sharing"
 
 if not os.path.exists(model_path):
