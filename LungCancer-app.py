@@ -1,24 +1,12 @@
 # Streamlit app code
-import os
-import gdown
 
 import streamlit as st
-
+import tensorflow as tf
 import numpy as np
 import cv2
 
-
-model_path = "efficientnetb1_modelv2.h5"
-file_id = "1sdbiZ8ZxY32qlQmLsKRwYS2TCuJ71H0X"  # Replace with your actual ID
-url = f"https://drive.google.com/file/d/1sdbiZ8ZxY32qlQmLsKRwYS2TCuJ71H0X/view?usp=sharing"
-
-if not os.path.exists(model_path):
-    gdown.download(url, model_path, quiet=False)
-
-import tensorflow as tf
-loaded_model = tf.keras.models.load_model(model_path)
-
-
+# Load the model
+loaded_model = tf.keras.models.load_model('efficientnetb1_model.h5')
 
 def predict_image_with_heatmap(img):
     print("Predicting image...")
